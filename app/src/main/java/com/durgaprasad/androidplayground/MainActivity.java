@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -16,16 +19,9 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
     }
 
-    public void changeImageBtnclicked(View v){
-        ImageView imageView = (ImageView) findViewById(R.id.catimageView);
-        if ("catImage".equals(imageView.getTag())) {
-            imageView.setImageResource(R.drawable.tiger);
-            imageView.setTag("tigerImage");
-        }
-        else {
-            imageView.setImageResource(R.drawable.cat);
-            imageView.setTag("catImage");
-        }
+    public void BtnClicked(View v){
+        EditText editText = (EditText) findViewById(R.id.ammountText);
+        Toast.makeText(this, String.format("%.2f",Double.parseDouble(editText.getText().toString()) * 76.3), Toast.LENGTH_SHORT).show();
     }
 
 }
