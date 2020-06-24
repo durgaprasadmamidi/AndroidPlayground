@@ -9,30 +9,21 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity{
 
-    boolean isBart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        isBart = true;
+        ImageView bartImageView = (ImageView) findViewById(R.id.bartImageView);
+        bartImageView.setX(-2000);
+        bartImageView.animate().translationXBy(2000).scaleX(0.5f).scaleY(0.5f).rotationBy(3600).setDuration(2000);
     }
 
 
 
-    public void fadeImage(View v){
+    public void animateImage(View v){
         ImageView bartImageView = (ImageView) findViewById(R.id.bartImageView);
-        ImageView homerImageView = (ImageView) findViewById(R.id.homerImageView);
-       if(isBart){
-        bartImageView.animate().alpha(0).setDuration(2000);
-        homerImageView.animate().alpha(1).setDuration(2000);
-        isBart = false;
-       }
-       else{
-           bartImageView.animate().alpha(1).setDuration(2000);
-           homerImageView.animate().alpha(0).setDuration(2000);
-           isBart = true;
-       }
+        bartImageView.animate().scaleX(1).scaleY(1).setDuration(1000);
     }
 
 }

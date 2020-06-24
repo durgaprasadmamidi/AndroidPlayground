@@ -12,25 +12,14 @@
         android:id="@+id/bartImageView"
         android:layout_width="419dp"
         android:layout_height="613dp"
-        android:onClick="fadeImage"
+        android:onClick="animateImage"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bart" />
-
-    <ImageView
-        android:id="@+id/homerImageView"
-        android:layout_width="419dp"
-        android:layout_height="613dp"
-        android:alpha="0"
-        android:onClick="fadeImage"
-        android:scaleType="fitStart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
